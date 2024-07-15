@@ -11,7 +11,7 @@
                         {{ with site.Data.homepage.main }}
                         <h1 class="mx-auto my-0 text-uppercase">{{ .header.title }}</h1>
                         <h2 class="text-white-50 mx-auto mt-2 mb-5">{{ .header.description }}</h2>
-                        <a class="btn btn-primary" href="{{ .header.button.url }}">{{ .header.button.text }}</a>
+                        <a class="btn btn-primary" href="tel:+0399237800">{{ .header.button.text }}</a>
                         {{ end }}
                     </div>
                 </div>
@@ -34,45 +34,95 @@
             </div>
         </section>
         {{ end }}
-        <!-- Projects-->
-        {{ with site.Data.homepage.projects }}
-        <section class="projects-section bg-light" id="projects">
-            <div class="container px-4 px-lg-5">
+        <!-- Expertise-->
+        {{ with site.Data.homepage.expertise }}
+        <section class="expertise-section bg-light" id="expertise">
+            <div class="container px-4 px-lg-5 mt-5">
                 <!-- Featured Project Row-->
-                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
-                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="{{ .card1.img }}" alt="..." /></div>
-                    <div class="col-xl-4 col-lg-5">
-                        <div class="featured-text text-center text-lg-left">
-                            <h4>{{ .card1.title }}</h4>
-                            <p class="text-black-50 mb-0">{{ .card1.text }}</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project One Row-->
-                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-                    <div class="col-lg-6"><img class="img-fluid" src="{{ .card2.img }}" alt="..." /></div>
+                <div class="row gx-0 mb-5 justify-content-center">
                     <div class="col-lg-6">
-                        <div class="bg-black text-center h-100 project">
+                        <img class="img-fluid h-100 w-100 object-fit-cover" src="{{ .card1.img }}" alt="..." />
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="bg-black h-100 project">
                             <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-left">
-                                    <h4 class="text-white">{{ .card2.title }}</h4>
-                                    <p class="mb-0 text-white-50">{{ .card2.text }}</p>
+                                <div class="project-text w-100 my-auto text-lg-left p-4">
+                                    <h4 class="text-white">{{ .card1.title }}</h4>
+                                    <p class="text-white-50">{{ .card1.text }}</p>
+                                    <a class="text-white" href="/{{ .card1.url }}">Read More</a>
                                     <hr class="d-none d-lg-block mb-0 ms-0" />
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Project Two Row-->
-                <div class="row gx-0 justify-content-center">
-                    <div class="col-lg-6"><img class="img-fluid" src="{{ .card3.img }}" alt="..." /></div>
-                    <div class="col-lg-6 order-lg-first">
-                        <div class="bg-black text-center h-100 project">
+                <!-- Project One Row-->
+                <div class="row gx-0 mb-5 justify-content-center">
+                    <div class="col-lg-6 order-lg-2">
+                        <img class="img-fluid h-100 w-100 object-fit-cover" src="{{ .card2.img }}" alt="..." />
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="bg-black h-100 project">
                             <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-right">
-                                    <h4 class="text-white">{{ .card3.title }}</h4>
-                                    <p class="mb-0 text-white-50">{{ .card3.text }}</p>
+                                <div class="project-text w-100 my-auto text-lg-right p-4">
+                                    <h4 class="text-white">{{ .card2.title }}</h4>
+                                    <p class="text-white-50">{{ .card2.text }}</p>
+                                    <a class="text-white" href="/{{ .card2.url }}">Read More</a>
                                     <hr class="d-none d-lg-block mb-0 me-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Two Row-->
+                <div class="row gx-0 mb-5 justify-content-center">
+                    <div class="col-lg-6">
+                        <img class="img-fluid h-100 w-100 object-fit-cover" src="{{ .card3.img }}" alt="..." />
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="bg-black h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-lg-left p-4">
+                                    <h4 class="text-white">{{ .card3.title }}</h4>
+                                    <p class="text-white-50">{{ .card3.text }}</p>
+                                    <a class="text-white" href="/{{ .card3.url }}">Read More</a>
+                                    <hr class="d-none d-lg-block mb-0 ms-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Third Row-->
+                <div class="row gx-0 mb-5 justify-content-center">
+                    <div class="col-lg-6 order-lg-2">
+                        <img class="img-fluid h-100 w-100 object-fit-cover" src="{{ .card4.img }}" alt="..." />
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="bg-black h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-lg-right p-4">
+                                    <h4 class="text-white">{{ .card4.title }}</h4>
+                                    <p class="text-white-50">{{ .card4.text }}</p>
+                                    <a class="text-white" href="/{{ .card4.url }}">Read More</a>
+                                    <hr class="d-none d-lg-block mb-0 me-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Fourth Row-->
+                <div class="row gx-0 mb-5 justify-content-center">
+                    <div class="col-lg-6">
+                        <img class="img-fluid h-100 w-100 object-fit-cover" src="{{ .card5.img }}" alt="..." />
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="bg-black h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-lg-left p-4">
+                                    <h4 class="text-white">{{ .card5.title }}</h4>
+                                    <p class="text-white-50">{{ .card5.text }}</p>
+                                    <a class="text-white" href="/{{ .card5.url }}">Read More</a>
+                                    <hr class="d-none d-lg-block mb-0 ms-0" />
                                 </div>
                             </div>
                         </div>
@@ -107,16 +157,37 @@
             </div>
         </section>
         <!-- Contact-->
-        <section class="contact-section bg-black">
+        <section class="contact-section bg-black" id="contact">
             <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 col-xl-6">
+                        <form id="contactForm" class="card border-0 shadow-lg">
+                            <div class="card-body p-5">
+                                <h2 class="text-center mb-4">Contact Us</h2>
+                                <div class="mb-3">
+                                    <input class="form-control" type="text" placeholder="Your Name" required />
+                                </div>
+                                <div class="mb-3">
+                                    <input class="form-control" type="email" placeholder="Your Email" required />
+                                </div>
+                                <div class="mb-3">
+                                    <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+                                </div>
+                                <div class="d-grid">
+                                    <button class="btn btn-primary btn-lg" type="submit">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row gx-4 gx-lg-5 mt-4">
                     <div class="col-md-4 mb-3 mb-md-0">
                         <div class="card py-4 h-100">
                             <div class="card-body text-center">
                                 <i class="fas fa-map-marked-alt text-primary mb-2"></i>
                                 <h4 class="text-uppercase m-0">Address</h4>
                                 <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50">{{ site.Params.address }}</div>
+                                <div class="small text-black-50"><a href="{{ site.Params.location }}">{{ site.Params.address }}</a></div>
                             </div>
                         </div>
                     </div>
@@ -130,21 +201,21 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="col-md-4 mb-3 mb-md-0" id="phone">
                         <div class="card py-4 h-100">
                             <div class="card-body text-center">
                                 <i class="fas fa-mobile-alt text-primary mb-2"></i>
                                 <h4 class="text-uppercase m-0">Phone</h4>
                                 <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50">{{ site.Params.phone }}</div>
+                                <div class="small text-black-50"><a href="tel:+0399237800">{{ site.Params.phone }}</a></div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="social d-flex justify-content-center">
-                    <a class="mx-2" href="{{ site.Params.twitter }}"><i class="fab fa-twitter"></i></a>
+                    <a class="mx-2" href="{{ site.Params.instagram }}"><i class="fab fa-instagram"></i></a>
                     <a class="mx-2" href="{{ site.Params.facebook }}"><i class="fab fa-facebook-f"></i></a>
-                    <a class="mx-2" href="{{ site.Params.github }}"><i class="fab fa-github"></i></a>
+                    <!-- <a class="mx-2" href="{{ site.Params.github }}"><i class="fab fa-github"></i></a> -->
                 </div>
             </div>
         </section>
